@@ -1,0 +1,184 @@
+:root {
+    --primary-color: #6448fe;
+    --background-color: #ffffff;
+    --button-color: #21092f;
+    --error-color: #ff5252;
+    --border-color: #dedddf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+    background-image: url(/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 150px;
+    gap: 30px;
+    margin-top: 200px;
+    
+}
+
+.card-front {
+    background-image: url(/images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 447px;
+    height: 245px;
+    position: relative;
+    padding: 30px;
+}
+
+.card-number {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    margin-top: 50px;
+    color: var(--background-color);
+    letter-spacing: 2px;
+    flex-direction: column;
+}
+
+.card-date {
+    display: flex;
+}
+
+.card-infos {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    color: var(--background-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-back {
+    background-image: url(/images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 447px;
+    height: 245px;
+    margin-left: 140px; 
+    display: flex;
+}
+
+.card-cvc {
+    display: flex;
+    align-items: center;
+    width: 88%;
+    justify-content: flex-end;
+    color: var(--background-color);
+}
+
+.info-card {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    height: 50vh;
+    position: relative;
+}
+
+.card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: 320px;
+    margin-top: 140px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.input {
+    border: 2px solid #dedddf;
+    width: 300px;
+    border-radius: 5px;
+    height: 36px;
+    padding: 8px;
+}
+
+.back-card-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.date-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-row-input {
+    display: flex;
+    gap: 5px;
+}
+
+#month_input {
+    width: 60px;
+    border-radius: 5px;
+    border: 2px solid #dedddf;
+    padding: 8px;
+}
+
+#year_input {
+    width: 60px;
+    border-radius: 5px;
+    border: 2px solid #dedddf;
+    padding: 8px;
+}
+
+.cvc-camp{
+    display: flex;
+    flex-direction: column;
+}
+
+#cvc_input{
+    width: 90px;
+}
+
+#confirm_button{
+    margin-top: 10px;
+    width: 300px;
+    background-color: #21092f;
+    color: #ffffff;
+    padding: 9px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+label {
+    padding: 4px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

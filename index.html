@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="card-front">
+        <img src="./images/card-logo.svg" alt="Logo of card">
+        <p class="card-number" id="number_text">0000 0000 0000 0000</p>
+          <div class="card-infos">
+            <p class="card-name" id="name_text">Gilvany Ana Pinheiro</p>
+            <div class="card-date">
+              <p id="month_text">MM</p>
+              <p>/</p>
+              <p id="year_text">YY</p>
+            </div>
+          </div>
+       </div>
+
+        <div class="card-back">
+            <p class="card-cvc" id="cvc_text">000</p>
+        </div>
+    </section>
+
+    <section class="info-card">
+        <form class="card-form">
+          <label for="">Cardholder Name</label>
+          <input type="text" class="input" id="name_input" placeholder="Gilvany Ana Pinheiro">
+    
+          <label for="">Card Number</label>
+          <input type="number" class="input" id="number_input" placeholder="1234 5678 9012 3456">
+    
+          <div class="back-card-infos">
+            <div class="date-input">
+              <label for="">EXP. Date (MM/YY)</label>
+              <div class="date-row-input">
+                <input type="number" id="month_input" placeholder="MM">
+                <input type="number" id="year_input" placeholder="YY">
+              </div>
+            </div>
+            
+            <div class="cvc-camp">
+              <label for="">CVC</label>
+              <input type="number" class="input" id="cvc_input" placeholder="123">
+            </div>
+          </div>
+    
+          <button id="confirm_button">Confirm</button>
+        </form>
+     </section>
+  </main>
+  <footer> <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor.</a> </span> <span> Coded by <a href="https://github.com/tpinheiro4"> Thiago Pinheiro</a>.</span>
+  </footer>
+  <script src="./src/index.js"></script>
+</body>
+</html>
