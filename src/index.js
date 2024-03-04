@@ -11,6 +11,10 @@ const yearCard = document.getElementById("year_text")
 const monthCard = document.getElementById("month_text")
 const backCard = document.getElementById("cvc_text")
 const confirmBtn = document.getElementById("confirm_button")
+const cardForm = document.getElementById("card_form")
+const thanksMsg = document.getElementById("thanks_msg")
+const continueBtn = document.getElementById("continue_btn")
+const errorInput = document.querySelector(".error-input")
 
 
 // Somente letras no input do nome
@@ -40,7 +44,6 @@ numberInput.addEventListener("input", function () {
     if (this.value.length > 16) {
         this.value = this.value.slice(0, 16); // Limita a 16 dígitos
     }
-
     
     if (this.value.length === 0) {
         numberCard.innerHTML = "0000 0000 0000 0000";
@@ -109,3 +112,32 @@ cvcInput.addEventListener("input", function() {
     
 }
 )
+
+document.getElementById("card_form").addEventListener("submit", function(ev) {
+    ev.preventDefault();
+
+    if (numberInput.value.length === 16) {
+        cardForm.style.display = "none"; 
+        thanksMsg.style.display = "flex";
+        errorInput.style.display = "none";
+    } else {
+        errorInput.style.display = "block";
+    }
+});
+
+continueBtn.addEventListener("click", function() {
+
+    thanksMsg.style.display = "none";
+    cardForm.style.display = "flex";
+
+    nameInput.value = "";
+    monthInput.value = "";
+    yearInput.value = "";
+    cvcInput.value = "";
+    numberInput.value = "";
+    numberCard.innerHTML = "0000 0000 0000 0000";
+    nameCard.innerHTML = "Gilvany Ana Pinheiro";
+    yearCard.innerHTML = "YY";
+    monthCard.innerHTML = "MM";
+    backCard.innerHTML = "000";
+})
