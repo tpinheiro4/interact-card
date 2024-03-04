@@ -37,10 +37,11 @@
         <form class="card-form" id="card_form">
           <label for="">Cardholder Name</label>
           <input type="text" class="input" id="name_input" placeholder="Gilvany Ana Pinheiro">
+          <p class="error-input name">Insira o nome</p>
     
           <label for="">Card Number</label>
           <input type="number" class="input" id="number_input" placeholder="1234 5678 9012 3456">
-          <p class="error-input">Obrigatório 16 números</p>
+          <p class="error-input number">Obrigatório 16 números</p>
     
           <div class="back-card-infos">
             <div class="date-input">
@@ -48,12 +49,14 @@
               <div class="date-row-input">
                 <input type="number" id="month_input" placeholder="MM">
                 <input type="number" id="year_input" placeholder="YY">
+                <p class="error-input date">Por favor, preencha os campos</p>
               </div>
             </div>
             
             <div class="cvc-camp">
               <label for="">CVC</label>
               <input type="number" class="input" id="cvc_input" placeholder="123">
+              <p class="error-input cvc">Obrigatório 3 números</p>
             </div>
           </div>
     

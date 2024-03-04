@@ -14,7 +14,6 @@ const confirmBtn = document.getElementById("confirm_button")
 const cardForm = document.getElementById("card_form")
 const thanksMsg = document.getElementById("thanks_msg")
 const continueBtn = document.getElementById("continue_btn")
-const errorInput = document.querySelector(".error-input")
 
 
 // Somente letras no input do nome
@@ -123,12 +122,23 @@ cvcInput.addEventListener("input", function() {
 document.getElementById("card_form").addEventListener("submit", function(ev) {
     ev.preventDefault();
 
-    if (numberInput.value.length === 16) {
-        cardForm.style.display = "none"; 
+    const nameErrorInput = document.querySelector(".error-input.name")
+    const errorNumberInput = document.querySelector(".error-input.number")
+    const cvcError = document.querySelector(".error-input.cvc")
+    const dateError = document.querySelector(".error-input.date")
+
+    if (nameInput.value === "") {
+        nameErrorInput.style.display = "block";
+    } else if (numberInput.value === "" || numberInput.value.length < 16) {
+        errorNumberInput.style.display = "flex"
+    } else if (cvcInput.value === "" || cvcInput.value.length < 3) {
+        cvcError.style.display = "flex"
+    } else if (yearInput.value === "" || monthInput.value === ""){
+        dateError.style.display = "block"
+    }
+    else {
         thanksMsg.style.display = "flex";
-        errorInput.style.display = "none";
-    } else {
-        errorInput.style.display = "block";
+        cardForm.style.display = "none"; 
     }
 });
 
