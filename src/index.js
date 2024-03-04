@@ -40,15 +40,18 @@ function onlyLetter () {
 
 numberInput.addEventListener("input", function () {
     this.value = this.value.replace(/\D/g, '');
-    
-    if (this.value.length > 16) {
-        this.value = this.value.slice(0, 16); // Limita a 16 dígitos
+
+    const formattedValue = this.value.replace(/(\d{4})/g, '$1 ').trim();
+
+    if (formattedValue.length > 19) {
+        // Limita a 16 dígitos
+        formattedValue = formattedValue.slice(0, 19);
     }
-    
-    if (this.value.length === 0) {
+
+    if (formattedValue.length === 0) {
         numberCard.innerHTML = "0000 0000 0000 0000";
     } else {
-        numberCard.innerHTML = this.value;
+        numberCard.innerHTML = formattedValue;
     }
 })
 
