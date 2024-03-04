@@ -43,10 +43,9 @@ numberInput.addEventListener("input", function () {
 
     const formattedValue = this.value.replace(/(\d{4})/g, '$1 ').trim();
 
-    if (formattedValue.length > 19) {
-        // Limita a 16 dígitos
-        formattedValue = formattedValue.slice(0, 19);
-    }
+    if (this.value.length > 16) {
+        this.value = this.value.slice(0, 16);
+    } 
 
     if (formattedValue.length === 0) {
         numberCard.innerHTML = "0000 0000 0000 0000";
@@ -55,6 +54,11 @@ numberInput.addEventListener("input", function () {
     }
 })
 
+numberInput.addEventListener("keydown", function (event) {
+    if (this.value.length === 16 && event.key !== 'Backspace') {
+        event.preventDefault();
+    }
+});
 
 // Aceitar apenas 2 números nos inputs de data
 
