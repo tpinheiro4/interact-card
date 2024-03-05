@@ -17,7 +17,7 @@ body {
     background-image: url(/images/bg-main-desktop.png);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 130vh;
+    height: 100vh;
 }
 
 .container {
@@ -234,4 +234,9 @@ footer {
     justify-content: center;
     align-items: center;
     position: relative
+}
+
+#confirm_button:hover {
+    transition: 0.5s;
+    background-color: #8e8593;
 }
