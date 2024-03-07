@@ -87,6 +87,12 @@
 .container .info-card .card-form input[type=number]::-webkit-inner-spin-button, .container .info-card .card-form input[type=number]::-webkit-outer-spin-button {
   display: none;
 }
+.container .info-card .card-form input {
+  transition: all 0.2s ease;
+}
+.container .info-card .card-form input:hover {
+  transform: scale(1.1);
+}
 .container .info-card .card-form .error-input {
   font-size: 11px;
   color: #ec4b4b;

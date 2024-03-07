@@ -99,6 +99,14 @@
                     }
                 }
 
+                input {
+                    transition: all 0.2s ease;
+                    
+                    &:hover {
+                      transform: scale(1.1);
+                    }
+                  }
+
                 .error-input {
                     font-size: 11px;
                     color: #ec4b4b;
