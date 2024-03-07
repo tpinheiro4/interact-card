@@ -189,5 +189,12 @@
   cursor: pointer;
   background: #666666;
 }
+.container .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3px;
+}
 
 /*# sourceMappingURL=style.css.map */
