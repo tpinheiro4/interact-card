@@ -14,9 +14,10 @@
 <body>
   <main class="container">
     <section class="card">
-      <div class="card-front">
+      <div class="card-bg-front">
         <img src="./images/card-logo.svg" alt="Logo of card">
-        <p class="card-number" id="number_text">0000 0000 0000 0000</p>
+        <div class="card-front"> 
+          <p class="card-number" id="number_text">0000 0000 0000 0000</p>
           <div class="card-infos">
             <p class="card-name" id="name_text">Gilvany Ana Pinheiro</p>
             <div class="card-date">
@@ -25,9 +26,10 @@
               <p id="year_text">YY</p>
             </div>
           </div>
-       </div>
+        </div>
+      </div>
 
-        <div class="card-back">
+        <div class="card-bg-back">
             <p class="card-cvc" id="cvc_text">000</p>
         </div>
     </section>
@@ -36,11 +38,11 @@
         <form class="card-form" id="card_form">
           <label for="">Cardholder Name</label>
           <input type="text" class="input" id="name_input" placeholder="Gilvany Ana Pinheiro">
-          <p class="error-input name">Insira o nome</p>
+          <div class="error-input name" style="display: none;">Insira o nome</div>
     
           <label for="">Card Number</label>
           <input type="number" class="input" id="number_input" placeholder="1234 5678 9012 3456">
-          <p class="error-input number">Obrigatório 16 números</p>
+          <div class="error-input number" style="display: none;">Obrigatório 16 números</div>
     
           <div class="back-card-infos">
             <div class="date-input">
@@ -48,14 +50,14 @@
               <div class="date-row-input">
                 <input type="number" id="month_input" placeholder="MM">
                 <input type="number" id="year_input" placeholder="YY">
-                <p class="error-input date">Por favor, preencha os campos</p>
               </div>
+              <div class="error-input date" style="display: none;">Por favor, preencha os campos</div>
             </div>
             
             <div class="cvc-camp">
               <label for="">CVC</label>
-              <input type="number" class="input" id="cvc_input" placeholder="123">
-              <p class="error-input cvc">Obrigatório 3 números</p>
+              <input type="number" class="input-cvc" id="cvc_input" placeholder="123">
+              <div class="error-input cvc" style="display: none;">Obrigatório 3 números</div>
             </div>
           </div>
     

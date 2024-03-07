@@ -127,14 +127,25 @@ document.getElementById("card_form").addEventListener("submit", function(ev) {
     const cvcError = document.querySelector(".error-input.cvc")
     const dateError = document.querySelector(".error-input.date")
 
+    nameInput.classList.remove('error');
+    numberInput.classList.remove('error');
+    cvcInput.classList.remove('error');
+    yearInput.classList.remove('error');
+    monthInput.classList.remove('error');
+
     if (nameInput.value === "") {
         nameErrorInput.style.display = "block";
+        nameInput.classList.add('error');
     } else if (numberInput.value === "" || numberInput.value.length < 16) {
-        errorNumberInput.style.display = "flex"
+        errorNumberInput.style.display = "block";
+        numberInput.classList.add('error');
     } else if (cvcInput.value === "" || cvcInput.value.length < 3) {
-        cvcError.style.display = "flex"
+        cvcError.style.display = "block";
+        cvcInput.classList.add('error');
     } else if (yearInput.value === "" || monthInput.value === ""){
-        dateError.style.display = "block"
+        dateError.style.display = "flex";
+        yearInput.classList.add('error');
+        monthInput.classList.add('error');
     }
     else {
         thanksMsg.style.display = "flex";
