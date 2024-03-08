@@ -6,7 +6,7 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
+- Solution URL: [Solution in Frontend Mentor](https://www.frontendmentor.io/solutions/not-responsive-interact-card-using-sass-and-js-r6y-ZwiZ3I)
 - Live Site URL:[Github Pages](https://tpinheiro4.github.io/interact-card/)
 
 ## My process
