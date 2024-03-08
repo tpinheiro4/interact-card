@@ -71,7 +71,7 @@
 .container .info-card {
   background-color: #fff;
   display: flex;
-  width: 80%;
+  width: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -82,7 +82,7 @@
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-left: 240px;
+  justify-content: center;
 }
 .container .info-card .card-form input[type=number]::-webkit-inner-spin-button, .container .info-card .card-form input[type=number]::-webkit-outer-spin-button {
   display: none;
@@ -91,7 +91,7 @@
   transition: all 0.2s ease;
 }
 .container .info-card .card-form input:hover {
-  transform: scale(1.1);
+  transform: scale(1.04);
 }
 .container .info-card .card-form .error-input {
   font-size: 11px;

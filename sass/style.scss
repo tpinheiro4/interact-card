@@ -79,7 +79,7 @@
     .info-card {
         background-color: #fff;
         display: flex;
-        width: 80%;
+        width: 100%;
         align-items: center;
         justify-content: center;
 
@@ -90,8 +90,8 @@
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-left: 240px;
-
+            justify-content: center;
+            
         
                 input[type=number] {
                     &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
@@ -103,7 +103,7 @@
                     transition: all 0.2s ease;
                     
                     &:hover {
-                      transform: scale(1.1);
+                      transform: scale(1.04);
                     }
                   }
 
